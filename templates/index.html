@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slavisa</title>
+</head>
+<body style="margin:0 auto; text-align:center;">
+<h1>Welcome to Color Pallete with most common colors!</h1>
+
+<h1>Upload new photo and see 10 most common colors</h1>
+    <form method=post enctype=multipart/form-data>
+      <input type=file name=file>
+      <input type=submit value=Upload>
+    </form>
+
+
+
+    <img src="{{ url_for('static', filename=photo) }}" height="300" width="300" style="padding-top:20px;">
+
+
+<hr>
+{% if codes: %}
+<table style="width:25%;margin:0 auto; text-align:center;">
+
+    <tr >
+        <th style="padding-bottom:20px;">Color:</th>
+        <th style="padding-bottom:20px;">HEX CODE:</th>
+    </tr>
+    {% for code in codes: %}
+    <tr>
+        <td style="background-color:{{ code }}"></td>
+        <td style="text-align:center; line-height:1.5; font-size:20px;"><strong>{{ code }}</strong></td>
+    </tr>
+    {% endfor %}
+</table>
+{% endif %}
+
+
+
+
+</body>
+</html>
