@@ -1,4 +1,4 @@
-#Image Colour Palette Generator , Python
+# Image Colour Palette Generator , Python
 
 * This project handle Image Processing and Data Science part with Back-End of Flask. I've added file form to choose
   image to upload and then process through tools to extract 10 most commong colours in that photo.
